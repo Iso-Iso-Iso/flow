@@ -1,0 +1,145 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.start-screen {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+
+  @media screen and(max-width:1024px) {
+    background: url("~@assets/home/start-screen.jpg") no-repeat center;
+    background-size: cover;
+  }
+  @media screen and(min-width:1025px) {
+    background: $secondary-color;
+  }
+
+  .container {
+    padding: 0;
+    @media screen and(max-width:1024px) {
+      @include flex($flex-direction: column);
+    }
+  }
+
+  &__buttons {
+    @include flex;
+    @media screen and(max-width:425px) {
+      flex-direction: column;
+      button:first-child {
+        margin-bottom: 20px;
+        transform: scale(1.1);
+      }
+    }
+
+    @media screen and(min-width:426px) {
+      button:first-child {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__container {
+    position: relative;
+    height: 100%;
+    @include flex($justify-content: space-between);
+  }
+  &__content {
+    width: 100%;
+
+    @media screen and(max-width:768px) {
+      flex: 1 0 60%;
+      height: 100%;
+    }
+    @media screen and(max-width:1025px) {
+      background: $secondary-color;
+      height: 100%;
+      padding: 15px;
+      @include flex;
+    }
+    @media screen and(min-width:1025px) {
+      flex: 0 0 100%;
+    }
+  }
+
+  &__content-warpper {
+    @media screen and(max-width:1024px) {
+      width: 100%;
+      padding: 20px;
+    }
+
+    @media screen and(min-width:1025px) {
+      width: 50%;
+    }
+  }
+
+  &__title {
+    text-align: center;
+
+    @media screen and(min-width:1024px) {
+      font-size: $start-screen-font-size;
+    }
+  }
+
+  &__mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: $primary-color-opacity;
+    @include flex($align-items: flex-end);
+
+    @media screen and(min-width: 1025px) {
+      display: none;
+    }
+    // TODO fix me
+    svg {
+      height: 70px !important;
+      width: 70px !important;
+      @include animation(scrollArrow, 3s, ease infinite);
+      @include keyframes(scrollArrow) {
+        0% {
+          transform: translate(0);
+        }
+        50% {
+          transform: translate(0, -100%);
+        }
+        100% {
+          transform: translate(0);
+        }
+      }
+      path {
+        fill: $secondary-color;
+      }
+    }
+  }
+
+  &__skew-wrapper {
+    position: relative;
+    background: $primary-color;
+    width: 100%;
+    height: 100%;
+    @media screen and(min-width:1025px) {
+      flex: 0 0 50%;
+      transform: skewX(-15deg) translateX(-90%);
+      &::after {
+        content: "";
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        background: $primary-color;
+      }
+    }
+
+    @media screen and(max-width:768px) {
+      flex: 0 1 40%;
+      min-height: max-content;
+    }
+  }
+
+  &__img {
+  }
+}

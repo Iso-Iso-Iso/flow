@@ -1,0 +1,35 @@
+@import "@styles/variables";
+
+body {
+  font-family: $main-font-family;
+  font-size: $standart-font-size;
+  color: $text-color;
+  font-weight: $standart-font-weight;
+}
+
+h1,
+.main-title {
+  font-size: $main-title-font-size;
+  color: $primary-color;
+  font-weight: $title-weight;
+  text-transform: uppercase;
+}
+
+h2,
+.article-title {
+  font-weight: $title-weight;
+  font-size: $article-title-font-size;
+  text-transform: uppercase;
+}
+
+h3,
+.subtitle {
+  font-size: $subtitle-font-sizep;
+  color: $subtitle-color;
+  font-weight: $subtitle-weight;
+}
+
+p,
+.standart-text {
+  font-size: $standart-font-size;
+}

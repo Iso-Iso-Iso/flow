@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "module": "system",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "jsx": "react",
+    "paths": {
+      "@styles/*": ["scss/*"],
+      "@components/*": ["components/*"],
+      "@/*": ["./*"],
+      "@common/*": ["components/common/*"],
+      "@icons/*": ["components/common/icons/*"],
+      "@ui/*": ["components/UI/*"],
+      "@helpers/*": ["helpers/*"],
+      "@api/*": ["api/*"],
+      "@hooks/*": ["hooks/*"],
+      "@services/*": ["services/*"],
+      "@views/*": ["views/*"],
+      "@routes/*": ["routes/*"],
+      "@assets/*": ["assets/*"],
+      "@interfaces/*": ["interfaces/*"]
+    }
+  }
+}
