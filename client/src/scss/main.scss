@@ -3,7 +3,12 @@
 @import "@styles/variables";
 @import "@styles/fonts";
 @import "@styles/typography";
-
+.container {
+  max-width: 1100px;
+  width: 100%;
+  padding: 15px 10px;
+  margin: 0 auto;
+}
 .mb-small {
   margin-bottom: 10px;
 }
@@ -19,6 +24,9 @@
 .flex-center {
   @include flex;
 }
+.flex-space {
+  @include flex(space-between);
+}
 .flex-evenly {
   @include flex(space-evenly);
 }
@@ -32,13 +40,6 @@
 
 .mr-big {
   margin-right: 35px;
-}
-
-.container {
-  max-width: 1100px;
-  width: 100%;
-  padding: 0 10px;
-  margin: 0 auto;
 }
 
 .img {
@@ -58,4 +59,21 @@
 body,
 html {
   overflow-x: hidden;
+}
+
+._pc {
+  @media screen and(max-width:1024px) {
+    display: none;
+  }
+}
+
+._mobile {
+  display: none;
+  @media screen and(max-width:1024px) {
+    display: block;
+  }
+}
+
+.relative {
+  position: relative;
 }

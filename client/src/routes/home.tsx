@@ -6,7 +6,8 @@ import ServiceInfo from "@components/home/service-info";
 function Home() {
   return (
     <>
-      <StartScreen /> <ServiceInfo />
+      <StartScreen />
+      <ServiceInfo />
     </>
   );
 }

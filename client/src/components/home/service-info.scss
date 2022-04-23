@@ -1,7 +1,14 @@
 @import "@styles/variables";
 
 .servie-info {
-  height: 300px;
+  padding: 15px;
+  min-height: 300px;
   width: 100%;
   background: $primary-color-dark;
+  color: white;
+  &__title {
+    @media screen and(max-width:768px) {
+      text-align: center;
+    }
+  }
 }

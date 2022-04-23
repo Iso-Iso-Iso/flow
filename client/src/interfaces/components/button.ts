@@ -1,5 +1,7 @@
+import { ReactNode } from "react";
+
 export interface Props {
-  children: string;
+  children: string | ReactNode;
   primary?: boolean;
   rounded?: boolean;
   className?: string;

@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "./start-screen.scss";
 
-import Button from "@common/button";
+import Button from "@components/ui/button";
+import IconArrow from "@components/ui/icons/arrow";
 
 import image from "@assets/home/start-screen.jpg";
-
-import IconArrow from "@icons/arrow";
 
 const StartScreen = () => {
   return (
@@ -13,11 +14,17 @@ const StartScreen = () => {
       <div className="container start-screen__container">
         <div className="start-screen__content">
           <div className="start-screen__content-warpper">
-            <h1 className="start-screen__title mb-medium">Следи за потоком </h1>
+            <h1 className="start-screen__title mb-small">Обучайся </h1>
+            <h2 className="start-screen__sub-title mb-big">
+              Бесплатные курсы английского
+            </h2>
             <div className="start-screen__buttons">
-              <Button huge primary>
-                Начать
-              </Button>
+              <Link to="/lessons">
+                <Button huge primary>
+                  Начать
+                </Button>
+              </Link>
+
               <Button huge>Войти</Button>
             </div>
           </div>

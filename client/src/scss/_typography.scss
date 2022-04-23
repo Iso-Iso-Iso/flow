@@ -13,6 +13,9 @@ h1,
   color: $primary-color;
   font-weight: $title-weight;
   text-transform: uppercase;
+  @media screen and(max-width:1024px) {
+    font-size: $main-title-font-size_mobile;
+  }
 }
 
 h2,
@@ -20,6 +23,9 @@ h2,
   font-weight: $title-weight;
   font-size: $article-title-font-size;
   text-transform: uppercase;
+  @media screen and(max-width:1024px) {
+    font-size: $article-title-font-size_mobile;
+  }
 }
 
 h3,
@@ -32,4 +38,5 @@ h3,
 p,
 .standart-text {
   font-size: $standart-font-size;
+  line-height: 130%;
 }

@@ -1,0 +1,57 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.slider {
+  overflow: visible !important;
+}
+.controllers {
+  @media screen and(max-width:1024px) {
+    display: none;
+  }
+}
+
+.pagination {
+  position: static;
+  width: max-content !important;
+  :global {
+    .swiper-pagination-bullet {
+      background: $primary-color;
+      opacity: 40%;
+      width: 10px;
+      height: 10px;
+    }
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+  }
+}
+
+.navigation {
+  @include flex;
+
+  :global {
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: static;
+      width: auto;
+      height: auto;
+      margin-top: auto;
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+
+    .swiper-button-prev {
+      margin-right: 15px;
+      transform: rotate(90deg);
+    }
+    .swiper-button-next {
+      transform: rotate(-90deg);
+    }
+
+    .button-component {
+      padding: 10px;
+    }
+  }
+}

@@ -1,7 +1,7 @@
-import { ComponentType } from "react";
+import { ComponentType, ReactNode } from "react";
 
-export interface PropsWithChildren {
-  children: ComponentType | string;
+export interface PropsWithChildren<T = ComponentType | string | ReactNode> {
+  children: T;
 }
 
 export interface PropsWithClassName {

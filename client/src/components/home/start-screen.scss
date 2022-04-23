@@ -27,7 +27,6 @@
       flex-direction: column;
       button:first-child {
         margin-bottom: 20px;
-        transform: scale(1.1);
       }
     }
 
@@ -75,9 +74,14 @@
   &__title {
     text-align: center;
 
-    @media screen and(min-width:1024px) {
-      font-size: $start-screen-font-size;
+    font-size: $start-screen-font-size;
+    @media screen and(max-width:1024px) {
+      font-size: $start-screen-font-size_mobile;
     }
+  }
+
+  &__sub-title {
+    text-align: center;
   }
 
   &__mobile {
@@ -138,8 +142,5 @@
       flex: 0 1 40%;
       min-height: max-content;
     }
-  }
-
-  &__img {
   }
 }

@@ -1,13 +1,22 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+
+import Navigation from "@common/navigation";
+
+import "swiper/scss";
+import "swiper/scss/navigation";
 
 function App() {
   return (
-    <p>
-      @adwad
-      <Link to="/aboba">awdawd</Link>
-    </p>
+    <>
+      <header>
+        <Navigation />
+      </header>
+      <main>
+        <Outlet />
+      </main>
+    </>
   );
 }
 

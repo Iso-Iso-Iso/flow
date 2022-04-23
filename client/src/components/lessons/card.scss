@@ -1,0 +1,36 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.slide-card {
+  overflow: hidden;
+  border-radius: 15px;
+  height: 300px;
+  position: relative;
+  cursor: pointer;
+  @include transition;
+  &:hover {
+    transform: scale(0.95);
+  }
+
+  &__img {
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background: $dark-opacity;
+    @include flex(flex-start, flex-end);
+  }
+
+  &__title {
+    color: $contrast-color;
+    font-size: $article-title-font-size;
+    text-transform: uppercase;
+    font-weight: $subtitle-weight;
+    @extend %link;
+  }
+}

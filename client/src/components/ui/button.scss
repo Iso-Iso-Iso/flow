@@ -21,9 +21,15 @@
 
   &__primary {
     background-color: $primary-color;
-    color: white;
+    color: $secondary-color;
     path {
-      fill: white;
+      fill: $secondary-color !important;
+    }
+    &:disabled {
+      color: $contrast-color;
+      path {
+        fill: $contrast-color !important;
+      }
     }
 
     &:hover {

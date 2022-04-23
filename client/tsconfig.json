@@ -14,7 +14,7 @@
       "@/*": ["./*"],
       "@common/*": ["components/common/*"],
       "@icons/*": ["components/common/icons/*"],
-      "@ui/*": ["components/UI/*"],
+      "@ui/*": ["components/ui/*"],
       "@helpers/*": ["helpers/*"],
       "@api/*": ["api/*"],
       "@hooks/*": ["hooks/*"],

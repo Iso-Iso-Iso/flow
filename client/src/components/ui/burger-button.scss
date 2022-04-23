@@ -1,0 +1,50 @@
+@import "@styles/mixins";
+
+%burger-sticks {
+  width: 100%;
+  height: 3px;
+  background: $contrast-color;
+  border-radius: 100px;
+
+  @include transition;
+}
+
+.burger {
+  width: 70px;
+  height: 40px;
+  @media screen and(max-width:1024px) {
+    @include flex;
+  }
+  position: relative;
+  &__sticks {
+    @extend %burger-sticks;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      @extend %burger-sticks;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      @extend %burger-sticks;
+    }
+
+    &_active {
+      background: rgba(255, 255, 255, 0);
+      &::after {
+        transform: rotate(45deg) translateY(50%);
+        bottom: 50%;
+      }
+      &::before {
+        transform: rotate(-45deg) translateY(-50%);
+        top: 50%;
+      }
+    }
+  }
+}

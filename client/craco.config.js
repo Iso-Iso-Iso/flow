@@ -8,7 +8,7 @@ module.exports = {
       "@common": path.resolve("src", "components", "common"),
       "@icons": path.resolve("src", "components", "common", "icons"),
       "@styles": path.resolve("src", "scss"),
-      "@ui": path.resolve("src", "components", "UI"),
+      "@ui": path.resolve("src", "components", "ui"),
       "@helpers": path.resolve("src", "helpers"),
       "@api": path.resolve("src", "api"),
       "@hooks": path.resolve("src", "hooks"),
