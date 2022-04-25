@@ -6,6 +6,8 @@ import "./start-screen.scss";
 import Button from "@components/button";
 import IconArrow from "@icons/arrow";
 
+import ROUTES from "@routes/index";
+
 import image from "@assets/home/start-screen.jpg";
 
 const StartScreen = () => {
@@ -19,13 +21,14 @@ const StartScreen = () => {
               Бесплатные курсы английского
             </h2>
             <div className="start-screen__buttons">
-              <Link to="/lessons">
+              <Link to={ROUTES.LESSONS}>
                 <Button huge primary>
                   Начать
                 </Button>
               </Link>
-
-              <Button huge>Войти</Button>
+              <Link to={ROUTES.USER_LOGIN}>
+                <Button huge>Войти</Button>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,40 +1,33 @@
 import React, { useState } from "react";
 
-import "./index.scss";
+import "./header-menu.scss";
 
 import BurgerButton from "@components/burger-button";
 
-import { NavLink } from "react-router-dom";
+import MenuLink from "./menu-link";
 
-const Links = () => (
-  <>
-    <li>
-      <NavLink
-        className={({ isActive }) =>
-          "nav__link " + (isActive ? "nav__link_active " : "")
-        }
-        to="/lessons"
-      >
-        Уроки
-      </NavLink>
-    </li>
-    <li>
-      <NavLink className="nav__link" to="/">
-        Тесты
-      </NavLink>
-    </li>
-    <li>
-      <NavLink className="nav__link" to="/">
-        Войти
-      </NavLink>
-    </li>
-    <li>
-      <NavLink className="nav__link" to="/">
-        Регестрация
-      </NavLink>
-    </li>
-  </>
-);
+import ROUTES from "@routes/index";
+
+// TODO?: refactor with components
+
+function HeaderMenuList() {
+  return (
+    <>
+      <li>
+        <MenuLink to={ROUTES.LESSONS}>Уроки</MenuLink>
+      </li>
+      <li>
+        <MenuLink to={ROUTES.TESTS}>Тесты</MenuLink>
+      </li>
+      <li>
+        <MenuLink to={ROUTES.USER_LOGIN}>Войти</MenuLink>
+      </li>
+      <li>
+        <MenuLink to={ROUTES.USER_REGISTER}>Регестрация</MenuLink>
+      </li>
+    </>
+  );
+}
 
 function Navigation() {
   const [isBurgerSeen, setIsBurgerSeen] = useState(false);
@@ -47,13 +40,13 @@ function Navigation() {
           (isBurgerSeen ? "nav__link-wrapper_active" : "")
         }
       >
-        <Links />
+        <HeaderMenuList />
       </ul>
       <nav className="nav">
         <div className="container flex-space">
           <div className="nav__logo">Flow!</div>
           <ul className="nav__link-wrapper flex-space _pc">
-            <Links />
+            <HeaderMenuList />
           </ul>
           <BurgerButton
             isBurgerSeen={isBurgerSeen}

@@ -45,31 +45,5 @@
     }
   }
 
-  &__link {
-    position: relative;
-    margin: 0 10px;
-    font-size: $article-title-font-size;
-    color: $contrast-color;
-
-    @media screen and(max-width:1024px) {
-      a {
-        color: $contrast-color;
-      }
-    }
-    @extend %link;
-
-    &_active {
-      color: $secondary-color;
-      &::after {
-        content: "";
-        border-radius: 100px;
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        background: $secondary-color;
-      }
-    }
-  }
+  
 }
