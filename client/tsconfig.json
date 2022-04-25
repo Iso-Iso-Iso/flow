@@ -13,7 +13,7 @@
       "@components/*": ["components/*"],
       "@/*": ["./*"],
       "@common/*": ["components/common/*"],
-      "@icons/*": ["components/common/icons/*"],
+      "@icons/*": ["components/icons/*"],
       "@ui/*": ["components/ui/*"],
       "@helpers/*": ["helpers/*"],
       "@api/*": ["api/*"],
@@ -22,7 +22,9 @@
       "@views/*": ["views/*"],
       "@routes/*": ["routes/*"],
       "@assets/*": ["assets/*"],
-      "@interfaces/*": ["interfaces/*"]
+      "@interfaces/*": ["interfaces/*"],
+      "@pages/*": ["pages/*"],
+      "@layouts/*": ["layouts/*"]
     }
   }
 }

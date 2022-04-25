@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-import "./navigation.scss";
+import "./index.scss";
 
-import BurgerButton from "@ui/burger-button";
+import BurgerButton from "@components/burger-button";
 
 import { NavLink } from "react-router-dom";
 

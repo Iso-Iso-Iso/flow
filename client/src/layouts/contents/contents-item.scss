@@ -1,0 +1,22 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.chapter-item {
+  margin-bottom: 25px;
+  a {
+    font-size: $subtitle-font-size;
+    font-weight: $subtitle-weight;
+    color: $primary-color;
+    position: relative;
+    margin-bottom: 10px;
+
+    @include transition;
+
+    &:visited {
+      color: $primary-color-opacity;
+    }
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}

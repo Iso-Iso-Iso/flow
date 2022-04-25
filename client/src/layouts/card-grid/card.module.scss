@@ -1,0 +1,29 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.card {
+  width: 300px;
+  height: 400px;
+  border: 3px solid $primary-color;
+  box-shadow: $shadow;
+  border-radius: 15px;
+  padding: 10px;
+  padding-bottom: 15px;
+  @include flex($flex-direction: column);
+
+  &__img {
+    border-radius: 10px;
+    overflow: hidden;
+    flex: 1 0 50%;
+    margin-bottom: 10px;
+  }
+  &__title {
+    font-weight: $title-weight;
+    align-self: flex-start;
+    flex: 1 1 100%;
+    text-transform: none;
+  }
+  &__button {
+    align-self: flex-end;
+  }
+}

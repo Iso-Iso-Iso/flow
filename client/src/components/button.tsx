@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Props } from "@/interfaces/components/button";
+import { Props } from "@interfaces/components/button";
 
 import "./button.scss";
 

@@ -2,7 +2,7 @@ import React from "react";
 
 import { Outlet } from "react-router-dom";
 
-import Navigation from "@common/navigation";
+import Navigation from "@layouts/navigation";
 
 import "swiper/scss";
 import "swiper/scss/navigation";

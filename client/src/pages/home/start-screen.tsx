@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 import "./start-screen.scss";
 
-import Button from "@components/ui/button";
-import IconArrow from "@components/ui/icons/arrow";
+import Button from "@components/button";
+import IconArrow from "@icons/arrow";
 
 import image from "@assets/home/start-screen.jpg";
 

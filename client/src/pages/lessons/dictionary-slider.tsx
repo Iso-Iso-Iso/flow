@@ -2,15 +2,16 @@ import React from "react";
 
 import { SwiperSlide } from "swiper/react";
 
-import Card from "@components/lessons/card";
-import Section from "@common/section";
-import CardSlider from "@common/card-slider";
-import ArticleTitle from "@components/common/secondary-title";
+import { Card, CardSlider } from "@layouts/card-slider";
+
+import { Section, SectionTitle } from "@layouts/section";
+
+import Stub from "@components/card-stub";
 
 function DictionarySlider() {
   return (
     <Section>
-      <ArticleTitle>Карточки-словари</ArticleTitle>
+      <SectionTitle>Карточки-словари</SectionTitle>
 
       <CardSlider>
         <SwiperSlide>
@@ -24,6 +25,9 @@ function DictionarySlider() {
         </SwiperSlide>
         <SwiperSlide>
           <Card> Название</Card>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Stub to="">Все словари</Stub>
         </SwiperSlide>
       </CardSlider>
     </Section>

@@ -5,8 +5,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "@styles/main.scss";
 
-import Home from "@routes/home";
-import Lessons from "@routes/lessons";
+import Home from "@pages/home";
+import Lessons from "@pages/lessons";
 
 import App from "@/App";
 

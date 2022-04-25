@@ -9,8 +9,8 @@ import { Pagination, Navigation } from "swiper";
 import { PropsWithChildren } from "@interfaces/components/index";
 import { PaginationOptions } from "swiper/types/modules/pagination";
 
-import Button from "@ui/button";
-import IconArrow from "@ui/icons/arrow";
+import Button from "@components/button";
+import IconArrow from "@icons/arrow";
 
 function CardSlider({ children }: PropsWithChildren) {
   const breakPoints = {

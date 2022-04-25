@@ -1,5 +1,5 @@
 import React from "react";
-import { BurgerProps } from "@/interfaces/components/burger-menu";
+import { BurgerProps } from "@interfaces/components/burger-menu";
 import "./burger-button.scss";
 
 function BurgerButton(props: BurgerProps) {

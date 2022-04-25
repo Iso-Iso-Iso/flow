@@ -1,0 +1,15 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.stub {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 4 + px dashed $primary-color;
+  @include flex($flex-direction: column);
+  @include transition;
+  &:hover {
+    transform: scale(0.95);
+  }
+}

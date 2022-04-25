@@ -3,6 +3,16 @@
 
 .slider {
   overflow: visible !important;
+  :global {
+    .swiper-wrapper {
+      align-items: stretch;
+    }
+    .swiper-slide {
+      height: 300px;
+    }
+    .stub {
+    }
+  }
 }
 .controllers {
   @media screen and(max-width:1024px) {

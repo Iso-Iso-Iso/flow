@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { ChapterItemProps } from "@/interfaces/components/chapterItem";
+import { ChapterItemProps } from "@interfaces/components/chapterItem";
 
-import "./chapter-item.scss";
+import "./contents-item.scss";
 
 function ChapterItem(props: ChapterItemProps) {
   const { children, to } = props;
