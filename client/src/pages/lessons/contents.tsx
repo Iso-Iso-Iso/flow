@@ -1,7 +1,9 @@
 import React from "react";
 
-import { Section, SectionTitle } from "@layouts/section";
+import Section from "@layouts/section";
 import { ContentsGrid, ContentsItem } from "@layouts/contents";
+
+import ROUTER from "@routes/index";
 
 function Contents() {
   const contents = [
@@ -17,13 +19,12 @@ function Contents() {
   ];
 
   return (
-    <Section>
-      <SectionTitle>Разделы</SectionTitle>
+    <Section title="Разделы">
       {contents.map((item, index) => {
         return (
           <ContentsGrid key={item.title} title={index + 1 + ". " + item.title}>
             {item.body.map((item, index) => (
-              <ContentsItem key={index} to={item.to}>
+              <ContentsItem key={index} to={ROUTER.LESSONS_SINGLE + index}>
                 {index + 1 + ". " + item.title}
               </ContentsItem>
             ))}

@@ -1,9 +1,19 @@
-import React, { ReactNode } from "react";
+import React from "react";
 
-import { PropsWithChildren } from "@interfaces/components/index";
+import SectionWrapper from "./section-wrapper";
+import SectionTitle from "./section-title";
 
-function Section({ children }: PropsWithChildren<ReactNode>) {
-  return <div className="mb-big">{children}</div>;
+import { SectionProps } from "@interfaces/components/section";
+
+function Section(props: SectionProps) {
+  const { title = "", children } = props;
+
+  return (
+    <SectionWrapper>
+      <SectionTitle>{title}</SectionTitle>
+      {children}
+    </SectionWrapper>
+  );
 }
 
 export default Section;

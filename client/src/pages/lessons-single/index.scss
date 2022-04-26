@@ -1,0 +1,6 @@
+@import "@styles/mixins";
+
+.lessons-single {
+  height: 100%;
+  @include flex(flex-start, flex-start);
+}

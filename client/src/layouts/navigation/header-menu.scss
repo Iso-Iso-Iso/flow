@@ -2,9 +2,7 @@
 @import "@styles/mixins";
 
 .nav-wrapper {
-  position: sticky;
-  top: 0;
-  left: 0;
+  position: relative;
   z-index: 2;
 }
 .nav {
@@ -44,6 +42,4 @@
       transform: translateY(0);
     }
   }
-
-  
 }

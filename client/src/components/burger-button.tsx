@@ -7,7 +7,7 @@ function BurgerButton(props: BurgerProps) {
 
   return (
     <div
-      className="burger _mobile"
+      className="burger _mobile-flex"
       onClick={() => setIsBurgerSeen(!isBurgerSeen)}
     >
       <div

@@ -1,0 +1,24 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.link {
+  display: block;
+  width: max-content;
+  color: $contrast-color;
+  margin-bottom: 15px;
+  @extend %link;
+
+  &_active {
+    color: $secondary-color;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 3px;
+      background: $secondary-color;
+    }
+  }
+}

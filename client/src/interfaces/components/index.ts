@@ -7,3 +7,9 @@ export interface PropsWithChildren<T = ComponentType | string | ReactNode> {
 export interface PropsWithClassName {
   className?: string;
 }
+
+export interface PropsLink {
+  to: string;
+  children: ReactNode;
+  isActive?: boolean;
+}

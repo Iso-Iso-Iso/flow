@@ -1,17 +1,17 @@
 import React from "react";
 
-import ChapterTitle from "@/layouts/contents/contents-title";
+import ContentsTitle from "@/layouts/contents/contents-title";
 
-import { ChapterProps } from "@interfaces/components/chapter";
+import { ContentsProps } from "@/interfaces/components/contents";
 
 import "./contents-grid.scss";
 
-function Chapter(props: ChapterProps) {
+function Chapter(props: ContentsProps) {
   const { children, title } = props;
 
   return (
     <>
-      <ChapterTitle>{title}</ChapterTitle>
+      <ContentsTitle>{title}</ContentsTitle>
       <div className="chapter-grid">{children}</div>
     </>
   );

@@ -10,10 +10,10 @@ import "swiper/scss/navigation";
 function App() {
   return (
     <>
-      <header>
+      <header className="header">
         <HeaderMenu />
       </header>
-      <main>
+      <main className="main">
         <Outlet />
       </main>
     </>
