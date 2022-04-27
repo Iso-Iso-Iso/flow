@@ -1,0 +1,28 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+.info {
+  padding-left: 20px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background: $primary-color;
+  }
+
+  &__logo {
+    @include flex;
+    border: 3px solid $secondary-color;
+    padding: 5px;
+    border-radius: 100%;
+    width: min-content;
+    margin-bottom: 20px;
+    path {
+      fill: $secondary-color;
+    }
+  }
+}

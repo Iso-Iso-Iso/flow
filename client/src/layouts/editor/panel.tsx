@@ -9,6 +9,7 @@ import { RichUtils } from "draft-js";
 import IconTitle from "@icons/title";
 import IconBold from "@icons/bold";
 import IconItalic from "@icons/italic";
+import IconInfo from "@icons/info";
 
 import "./panel.scss";
 
@@ -26,6 +27,12 @@ function Panale(props: Props) {
     setEditorState((state) => RichUtils.toggleInlineStyle(state, "ITALIC"));
   }
 
+  function setInfo() {
+    setEditorState((state) =>
+      RichUtils.toggleBlockType(state, "create-info-block")
+    );
+  }
+
   return (
     <div className="editor-panel">
       <Button handler={setTitle}>
@@ -36,6 +43,10 @@ function Panale(props: Props) {
       </Button>
       <Button handler={setItalic}>
         <IconItalic />
+      </Button>
+
+      <Button handler={setInfo}>
+        <IconInfo />
       </Button>
     </div>
   );
