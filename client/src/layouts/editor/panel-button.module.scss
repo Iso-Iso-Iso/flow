@@ -1,0 +1,12 @@
+@import "@styles/mixins";
+@import "@styles/variables";
+
+.button {
+  padding: 5px;
+  border-radius: 10px;
+
+  background: $admin-panel-button-color;
+  &:hover {
+    background: $admin-panel-button-color-opacity;
+  }
+}

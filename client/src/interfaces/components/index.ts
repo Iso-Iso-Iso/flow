@@ -11,5 +11,5 @@ export interface PropsWithClassName {
 export interface PropsLink {
   to: string;
   children: ReactNode;
-  isActive?: boolean;
+  active?: boolean;
 }

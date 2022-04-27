@@ -7,6 +7,10 @@ import Lessons from "@pages/lessons";
 import App from "@/App";
 import LessonsSingle from "@pages/lessons-single";
 
+import Admin from "@pages/admin";
+import AdminHome from "@pages/admin/home";
+import AdminLessonsEditon from "@pages/admin/lessons-editor";
+
 import "@styles/main.scss";
 
 import ROUTES from "@routes/index";
@@ -24,6 +28,20 @@ root.render(
             path={ROUTES.LESSONS_SINGLE + ":id"}
             element={<LessonsSingle />}
           />
+        </Route>
+        {/* <Route path={ROUTES.ADMINPANEL} element={<Admin />}>
+          <Route index element={<AdminHome />}></Route>
+          <Route > </Route>
+        </Route> */}
+
+        <Route path="/" element={<Admin />}>
+          <Route path={ROUTES.ADMINPANEL} element={<AdminHome />}></Route>
+          <Route
+            path={ROUTES.ADMINPANEL_LESSONS_ADD}
+            element={<AdminLessonsEditon />}
+          >
+            {" "}
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>

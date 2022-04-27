@@ -1,19 +1,25 @@
 import React from "react";
 
-import { SideBar, SideContent, Title, Link } from "@layouts/side-bar";
+import {
+  SideBar,
+  SideContent,
+  Title,
+  Link,
+  SideBarWrapper,
+} from "@layouts/side-bar";
 
 import { ContentsGrid, ContentsItem } from "@layouts/contents";
 import { CardGrid, Card } from "@/layouts/card-grid";
 import Section from "@layouts/section";
 
-import "./index.scss";
-
 function LessonsSingle() {
   return (
-    <div className="lessons-single">
+    <SideBarWrapper>
       <SideBar>
         <Title>Оглавление</Title>
-        <Link to="#">1. Начало</Link>
+        <Link active to="#">
+          1. Начало
+        </Link>
       </SideBar>
       <SideContent>
         <h1 className="mb-big">Название темы</h1>
@@ -25,7 +31,7 @@ function LessonsSingle() {
           ducimus quaerat saepe et provident, exercitationem maxime eius
           voluptatem minus possimus facilis dolorum repellendus consectetur
           temporibus earum cum quae animi sequi. Aut, culpa? Corporis dolor
-          sequi possimus doloremque? At laborum culpa quidem quam obcaecati,
+          sequi pуossimus doloremque? At laborum culpa quidem quam obcaecati,
           recusandae sequi rerum officia est doloremque dolor possimus ad nobis
           excepturi hic, nostrum sunt quaerat quod tempora eius ea?
         </Section>
@@ -59,7 +65,7 @@ function LessonsSingle() {
           </CardGrid>
         </Section>
       </SideContent>
-    </div>
+    </SideBarWrapper>
   );
 }
 

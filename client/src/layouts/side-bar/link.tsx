@@ -5,11 +5,11 @@ import styles from "./link.module.scss";
 import { PropsLink } from "@interfaces/components";
 
 function Link(props: PropsLink) {
-  const { to, children, isActive = false } = props;
+  const { to, children, active = false } = props;
 
   return (
     <a
-      className={styles.link + " " + (isActive ? styles.link_active : "")}
+      className={styles.link + " " + (active ? styles.link_active : "")}
       href={to}
     >
       {children}

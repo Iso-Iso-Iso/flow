@@ -3,22 +3,26 @@
 
 .link {
   display: block;
-  width: max-content;
+  padding: 10px;
+  border-radius: 10px;
   color: $contrast-color;
+  svg {
+    margin-right: 10px;
+  }
+  path {
+    fill: $contrast-color;
+  }
   margin-bottom: 15px;
-  @extend %link;
+  @include transition;
+  @include flex(flex-start);
+  &:hover {
+    background: $primary-color-opacity;
+  }
 
   &_active {
-    color: $secondary-color;
-    position: relative;
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -5px;
-      width: 100%;
-      height: 3px;
-      background: $secondary-color;
+    path {
+      fill: $secondary-color;
     }
+    color: $secondary-color;
   }
 }

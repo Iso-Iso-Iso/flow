@@ -10,6 +10,10 @@ const routes = {
   USER_LOGIN: "/user/login",
   USER_REGISTER: "/user/register",
   ADMINPANEL: "/admin",
+  ADMINPANEL_LESSONS: "/admin/lessons",
+  ADMINPANEL_LESSONS_ADD: "/admin/lessons/add",
+  ADMINPANEL_DICTIONARIES: "/admin/dictionaries",
+  ADMINPANEL_DICTIONARIES_ADD: "/admin/dictionaries/add",
 };
 
 export default routes;
