@@ -1,31 +1,19 @@
 import React from "react";
+import { Editor } from "draft-js";
 
-import { Editor, ContentBlock } from "draft-js";
-
-import { Props } from "./interfaces";
-
-import InfoBlock from "./info-block";
+import { EditorStateManagmentProps } from "@interfaces/components/editor";
 
 import style from "./textarea.module.scss";
 
-function renderValidator(contentBlock: ContentBlock) {
-  const blockType = contentBlock.getType();
+import renderEditorFunction from "./editor-components-fn";
 
-  if (blockType === "create-info-block") {
-    return {
-      component: InfoBlock,
-      editable: true,
-    };
-  }
-}
-
-function Textarea(props: Props) {
+function Textarea(props: EditorStateManagmentProps) {
   const { setEditorState, editorState } = props;
 
   return (
     <div className={style.textarea}>
       <Editor
-        blockRendererFn={renderValidator}
+        blockRendererFn={renderEditorFunction}
         editorState={editorState}
         onChange={setEditorState}
       />

@@ -54,4 +54,14 @@
       }
     }
   }
+
+  &:disabled {
+    background: transparent;
+    color: $primary-color-opacity;
+    border-color: $primary-color-opacity;
+    cursor: auto;
+    &:hover {
+      box-shadow: none;
+    }
+  }
 }

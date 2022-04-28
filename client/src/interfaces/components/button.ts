@@ -6,4 +6,5 @@ export interface Props {
   rounded?: boolean;
   className?: string;
   huge?: boolean;
+  disabled?: boolean;
 }

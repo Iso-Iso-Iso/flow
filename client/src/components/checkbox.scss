@@ -1,0 +1,41 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.input-checkbox {
+  display: none;
+}
+.checkbox {
+  cursor: pointer;
+
+  &_with-children {
+    @include flex(flex-start);
+  }
+  &__lever-wrapper {
+    background: $secondary-color-dark;
+    width: 40px;
+    height: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    @include transition;
+    &_active {
+      background: $primary-color-opacity;
+    }
+  }
+
+  &__lever {
+    width: 20px;
+    height: 20px;
+    background: $primary-color;
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    @include transition;
+    &_active {
+      left: 100%;
+      transform: translate(-100%, -50%);
+    }
+  }
+}
