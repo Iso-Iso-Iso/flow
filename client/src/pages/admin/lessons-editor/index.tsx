@@ -13,7 +13,7 @@ function LessonsEditor() {
   const [lessonName, setLessonName] = useState("");
 
   const [isLessonShow, setIsLessonShow] = useState(false);
-  const [isRecommendationsShow, setisRecommendationsShow] = useState(true);
+  const [isRecommendationsShow, setIsRecommendationsShow] = useState(true);
 
   const isButtonsDisabled = useMemo(() => {
     return lessonName.length ? false : true;
@@ -32,7 +32,7 @@ function LessonsEditor() {
       </Checkbox>
       <Checkbox
         active={isRecommendationsShow}
-        onChange={setisRecommendationsShow}
+        onChange={setIsRecommendationsShow}
       >
         Показывать рекомендации
       </Checkbox>

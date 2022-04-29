@@ -7,4 +7,5 @@ export interface Props {
   className?: string;
   huge?: boolean;
   disabled?: boolean;
+  onClick?: () => any;
 }

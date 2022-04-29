@@ -1,0 +1,20 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.notation-item {
+  margin: 0 10px;
+  @include flex;
+  cursor: pointer;
+  padding: 10px;
+  background: $admin-panel-button-color;
+  border-radius: 10px;
+  &:hover {
+    background: $admin-panel-button-color-opacity;
+  }
+  .icon {
+    margin: 0 5px;
+  }
+  &__text {
+    margin-right: 10px;
+  }
+}
