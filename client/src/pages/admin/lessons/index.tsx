@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 
 import { NotationGrid, NotationItem } from "@layouts/notation";
 import { useSearchParams } from "react-router-dom";
@@ -25,6 +25,7 @@ function AdminLessons() {
     setCurrentPage(currnetPage);
   }, [searchParams, setSearchParams]);
 
+  //   TODO! refactor this without full params reset
   return (
     <NotationGrid
       maxPage={maxPage}
