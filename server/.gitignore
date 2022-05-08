@@ -9,3 +9,4 @@ package-lock.json
 # production
 /build
 /dist
+.env
