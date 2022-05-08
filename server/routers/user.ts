@@ -19,6 +19,10 @@ router.post(
   UserController.createOne
 );
 router.get("/user/:name", UserController.getOne);
-router.put("/user/:name", UserController.updateOne);
+router.put(
+  "/user/:name",
+  [validateFieldLength("password", 8), encryptUserPassword],
+  UserController.updateOne
+);
 
 export default router;

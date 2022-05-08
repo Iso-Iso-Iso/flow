@@ -20,6 +20,8 @@ function validateFieldLength(
       if (Object.prototype.hasOwnProperty.call(field, key)) {
         const element = (field as validateField)[key];
 
+        if (!req.body[key]) continue;
+
         if (req.body[key].length < element) return res.status(500).json({});
       }
     }
@@ -27,9 +29,10 @@ function validateFieldLength(
   }
 
   function singleValidate(req: Request, res: Response, next: NextFunction) {
+    if (!req.body[field as string]) return next();
+
     if (req.body[field as string].length < (length as number))
       return res.status(500).json({});
-    console.log(1);
 
     next();
   }

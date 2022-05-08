@@ -1,6 +1,6 @@
 import { User } from "@interfaces/models/user";
 import UserModel from "@models/user";
-import RoleModel from "@models/role";
+
 import RoleService from "@service/role";
 
 class UserService {
@@ -20,7 +20,9 @@ class UserService {
     if (!user) throw new Error("User is not exist");
     return user;
   }
-  async updateOne() {}
+  async updateOne(name: string, userParams: User) {
+    await UserModel.updateOne({ name }, userParams);
+  }
 }
 
 export default new UserService();
