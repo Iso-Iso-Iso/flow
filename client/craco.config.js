@@ -18,6 +18,7 @@ module.exports = {
       "@interfaces": path.resolve("src", "interfaces"),
       "@pages": path.resolve("src", "pages"),
       "@layouts": path.resolve("src", "layouts"),
+      "@store": path.resolve("src", "store"),
     },
     extensions: ["", ".js", ".jsx", ".ts", ".tsx", ".scss"],
   },

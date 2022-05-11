@@ -23,7 +23,7 @@ function LessonsEditor() {
     <div>
       <Input
         value={lessonName}
-        onChange={setLessonName}
+        onChange={(e) => setLessonName(e.target.value)}
         className="mb-big"
         placeholder="Называние урока"
       ></Input>

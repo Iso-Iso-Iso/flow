@@ -8,7 +8,7 @@ const routes = {
   TESTS_SINGLE: "/tests/",
   USER: "/user",
   USER_LOGIN: "/user/login",
-  USER_REGISTER: "/user/register",
+  USER_REGISTER: "/user/registration",
   ADMINPANEL: "/admin",
   ADMINPANEL_LESSONS: "/admin/lessons",
   ADMINPANEL_LESSONS_ADD: "/admin/lessons/add",

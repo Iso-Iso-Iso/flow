@@ -12,6 +12,8 @@ import AdminHome from "@pages/admin/home";
 import AdminLessonsEditon from "@pages/admin/lessons-editor";
 import AdminLessons from "@pages/admin/lessons";
 
+import UserRegistration from "@pages/user/register";
+
 import "@styles/main.scss";
 
 import ROUTES from "@routes/index";
@@ -29,6 +31,7 @@ root.render(
             path={ROUTES.LESSONS_SINGLE + ":id"}
             element={<LessonsSingle />}
           />
+          <Route path={ROUTES.USER_REGISTER} element={<UserRegistration />} />
         </Route>
 
         <Route path="/" element={<Admin />}>

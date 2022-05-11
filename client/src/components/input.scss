@@ -1,16 +1,63 @@
 @import "@styles/variables";
 @import "@styles/mixins";
 
+// *old styles
+// !will be removed in a future release
+// .input-component {
+//   max-width: 100%;
+//   width: 100%;
+//   padding: 5px 10px;
+//   font-size: $standart-font-size;
+//   border: 3px solid $primary-color;
+//   border-radius: 5px;
+//   @include transition;
+
+//   &:focus {
+//     box-shadow: 0px 0px 0px 5px $primary-color-opacity;
+//   }
+// }
+
 .input-component {
   max-width: 100%;
   width: 100%;
-  padding: 5px 10px;
   font-size: $standart-font-size;
-  border: 3px solid $primary-color;
-  border-radius: 5px;
+  background: transparent;
+  padding: 5px 0;
   @include transition;
-
   &:focus {
-    box-shadow: 0px 0px 0px 5px $primary-color-opacity;
+    background: $input-bg-color;
+  }
+}
+
+.input-placeholder {
+  @include transition;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-weight: $subtitle-weight;
+  transform-origin: left top;
+}
+.input-wrapper {
+  display: block;
+  position: relative;
+  border-bottom: solid 3px $primary-color;
+  max-width: 100%;
+  width: 100%;
+  padding-top: 20px;
+  margin-bottom: 20px;
+
+  &_error {
+    border-bottom: solid 3px $secondary-color-dark;
+    .input-placeholder {
+      color: $secondary-color-dark;
+    }
+  }
+  &_focused {
+    .input-placeholder {
+      top: 0;
+      transform: scale(0.8);
+      color: $input-placeholder-color;
+    }
   }
 }
